@@ -143,7 +143,11 @@ mic queue proj
 #  spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'arm64 x86_64' }
 #  spec.pod_target_xcconfig = { 'VALID_ARCHS[sdk=iphonesimulator*]' => 'x86_64' }
 #  spec.user_target_xcconfig = { 'VALID_ARCHS' => 'x86_64','Excluded_ARCHS' => 'arm64' }
-  spec.xcconfig = { 'VALID_ARCHS' => 'x86_64','Excluded_ARCHS' => 'arm64' }
+#  spec.xcconfig = { 'VALID_ARCHS' => 'x86_64','Excluded_ARCHS' => 'arm64' }
+
+  spec.xcconfig = { 'VALID_ARCHS' => 'x86_64' }
+  spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
   spec.dependency "SDWebImage_Yumai", "~> 0.0.2"
   spec.ios.dependency "YMTool", "~> 0.0.1"
