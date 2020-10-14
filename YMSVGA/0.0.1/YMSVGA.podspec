@@ -144,5 +144,5 @@ SVGA改
 
 
   spec.requires_arc = false
-  spec.requires_arc = ['YMSVGA/*.m','YMSVGA/SVGAPlayer/SVGA*.m']
+  spec.requires_arc = ['YMSVGA/YMSVGA/*.m','YMSVGA/SVGAPlayer/SVGA*.m']
 end
